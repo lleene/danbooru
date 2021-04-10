@@ -36,17 +36,10 @@ Rails.application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
-<<<<<<< HEAD
   # Include generic and useful information about system operation, but avoid logging too much
   # information to avoid inadvertent exposure of personally identifiable information (PII).
-=======
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-<<<<<<< HEAD
-  # config.log_level = :info
->>>>>>> 32f252673... Init config
-=======
->>>>>>> 21ae86751... Rebase config
   config.log_level = :error
 
 
