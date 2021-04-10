@@ -115,22 +115,22 @@ module Danbooru
     # Maximum size of an upload. If you change this, you must also change
     # `client_max_body_size` in your nginx.conf.
     def max_file_size
-      50.megabytes
+      500.megabytes
     end
 
     # Maximum resolution (width * height) of an upload. Default: 441 megapixels (21000x21000 pixels).
     def max_image_resolution
-      21000 * 21000
+      40000 * 40000
     end
 
     # Maximum width of an upload.
     def max_image_width
-      40000
+      100000
     end
 
     # Maximum height of an upload.
     def max_image_height
-      40000
+      100000
     end
 
     # How long pending posts stay in the modqueue before being deleted.
@@ -158,8 +158,15 @@ module Danbooru
     def storage_manager
       # Store files on the local filesystem.
       # base_dir - where to store files (default: under public/data)
+<<<<<<< HEAD
       # base_url - where to serve files from (default: https://#{hostname}/data)
       StorageManager::Local.new(base_url: "#{Danbooru.config.canonical_url}/data", base_dir: Rails.root.join("public/data"))
+=======
+      # base_url - where to serve files from (default: http://#{hostname}/data)
+      # hierarchical: false - store files in a single directory
+      # hierarchical: true - store files in a hierarchical directory structure, based on the MD5 hash
+      StorageManager::Local.new(base_url: "#{CurrentUser.root_url}/data", base_dir: Rails.root.join("public/data"), hierarchical: true)
+>>>>>>> 32f252673... Init config
 
       # Store files on one or more remote host(s). Configure SSH settings in
       # ~/.ssh_config or in the ssh_options param (ref: http://net-ssh.github.io/net-ssh/Net/SSH.html#method-c-start)

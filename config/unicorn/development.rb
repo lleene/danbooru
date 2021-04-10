@@ -1,5 +1,5 @@
 # Set your full path to application.
-app_path = "/var/www/danbooru2/current"
+app_path = "/var/www/danbooru"
 
 # Set unicorn options
 worker_processes 2

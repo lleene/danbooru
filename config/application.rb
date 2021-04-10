@@ -43,8 +43,12 @@ module Danbooru
     # config.assets.version = '1.0'
     config.autoload_paths += %W(#{config.root}/app/presenters #{config.root}/app/logical/concerns #{config.root}/app/logical #{config.root}/app/mailers)
     config.plugins = [:all]
+<<<<<<< HEAD
     config.time_zone = 'Eastern Time (US & Canada)'
     config.active_model.i18n_customize_full_message = true
+=======
+    config.time_zone = 'Amsterdam'
+>>>>>>> 32f252673... Init config
 
     raise "Danbooru.config.secret_key_base not configured" if Danbooru.config.secret_key_base.blank?
     config.secret_key_base = Danbooru.config.secret_key_base

@@ -2,6 +2,9 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.hosts << "zathura.leene.dev"
+  config.hosts << "ib-zathura"
+  config.hosts << "localhost"
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -29,14 +32,21 @@ Rails.application.configure do
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
-  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
+<<<<<<< HEAD
   # Include generic and useful information about system operation, but avoid logging too much
   # information to avoid inadvertent exposure of personally identifiable information (PII).
+=======
+  # Use the lowest log level to ensure availability of diagnostic information
+  # when problems arise.
+  # config.log_level = :info
+>>>>>>> 32f252673... Init config
   config.log_level = :error
+  # config.log_level = :warning
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]

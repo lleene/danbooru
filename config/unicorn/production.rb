@@ -1,12 +1,18 @@
 # Set your full path to application.
-app_path = "/var/www/danbooru2/current"
+app_path = "/var/www/danbooru"
 
 # Set unicorn options
 worker_processes 30
 
+<<<<<<< HEAD
 timeout 60
 # listen "127.0.0.1:9000", :tcp_nopush => true
 listen "/tmp/.unicorn.sock", backlog: 1024
+=======
+timeout 500
+listen "127.0.0.1:9000", :tcp_nopush => true
+# listen "/tmp/.unicorn.sock", backlog: 1024
+>>>>>>> 32f252673... Init config
 
 # Spawn unicorn master worker for user apps (group: apps)
 user 'danbooru', 'danbooru'
@@ -18,8 +24,8 @@ working_directory app_path
 rails_env = ENV['RAILS_ENV'] || 'production'
 
 # Log everything to one file
-stderr_path "/dev/null"
-stdout_path "/dev/null"
+stderr_path "log/unicorn.log"
+stdout_path "log/unicorn.log"
 
 # Set master PID location
 pid "#{app_path}/tmp/pids/unicorn.pid"

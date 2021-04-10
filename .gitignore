@@ -15,6 +15,7 @@ public/packs-test/
 public/packs/
 test/reports/
 
+<<<<<<< HEAD
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 .yarn/*
 !.yarn/patches
@@ -22,3 +23,11 @@ test/reports/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+=======
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+>>>>>>> 32f252673... Init config
