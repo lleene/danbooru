@@ -10,21 +10,13 @@ default: &default
 
   # Additional paths webpack should lookup modules
   # ['app/assets', 'engine/foo/app/assets']
-<<<<<<< HEAD
   additional_paths: ["app/components"]
-=======
-  resolved_paths: []
-<<<<<<< HEAD
-  # additional_paths: []
->>>>>>> 32f252673... Init config
-=======
->>>>>>> 21ae86751... Rebase config
 
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false
 
   # Extract and emit a css file
-  extract_css: false
+  extract_css: true
 
   static_assets_extensions:
     - .jpg
