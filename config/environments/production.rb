@@ -4,7 +4,6 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.hosts << "zathura.leene.dev"
   config.hosts << "ib-zathura"
-  config.hosts << "localhost"
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -43,10 +42,13 @@ Rails.application.configure do
 =======
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
+<<<<<<< HEAD
   # config.log_level = :info
 >>>>>>> 32f252673... Init config
+=======
+>>>>>>> 21ae86751... Rebase config
   config.log_level = :error
-  # config.log_level = :warning
+
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]

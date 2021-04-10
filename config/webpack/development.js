@@ -16,6 +16,9 @@ module.exports = merge(webpackConfig, {
 });
 =======
 const environment = require('./environment')
+const eslint = require('./loaders/eslint')
+
+environment.loaders.append('eslint', eslint);
 
 module.exports = environment.toWebpackConfig()
 >>>>>>> 32f252673... Init config

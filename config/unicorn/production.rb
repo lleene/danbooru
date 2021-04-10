@@ -5,6 +5,7 @@ app_path = "/var/www/danbooru"
 worker_processes 30
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 timeout 60
 # listen "127.0.0.1:9000", :tcp_nopush => true
 listen "/tmp/.unicorn.sock", backlog: 1024
@@ -13,6 +14,11 @@ timeout 500
 listen "127.0.0.1:9000", :tcp_nopush => true
 # listen "/tmp/.unicorn.sock", backlog: 1024
 >>>>>>> 32f252673... Init config
+=======
+timeout 180
+# listen "127.0.0.1:9000", :tcp_nopush => true
+listen "/tmp/.unicorn.sock", backlog: 1024
+>>>>>>> 21ae86751... Rebase config
 
 # Spawn unicorn master worker for user apps (group: apps)
 user 'danbooru', 'danbooru'

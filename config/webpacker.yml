@@ -14,8 +14,11 @@ default: &default
   additional_paths: ["app/components"]
 =======
   resolved_paths: []
+<<<<<<< HEAD
   # additional_paths: []
 >>>>>>> 32f252673... Init config
+=======
+>>>>>>> 21ae86751... Rebase config
 
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false

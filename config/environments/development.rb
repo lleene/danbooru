@@ -2,7 +2,6 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.hosts << "ib-zathura"
   config.hosts << "localhost"
 
   # In the development environment your application's code is reloaded any time
